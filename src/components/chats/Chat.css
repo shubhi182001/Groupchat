@@ -30,7 +30,7 @@
     background-repeat: repeat;
     background-position: center;
     padding: 30px;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 .chat-message{
@@ -39,6 +39,50 @@
     padding: 10px;
     width: fit-content;
     border-radius: 10px;
-    background-color: #ffffff;
+    background-color: rgb(192, 172, 210);
     margin-bottom: 30px;
+}
+.chat-reciever{
+ margin-left: auto;   
+ background-color: pink;
+}
+
+.chat-timestamp{
+    margin-left: 10px;
+    font-size: xx-small;
+}
+
+.chat-name{
+    position: absolute;
+    top: -15px;
+    font-weight: 800;
+    font-size: 11px;
+}
+
+.chat-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 62px;
+    border-top: 1px solid lightgray;
+}
+
+.chat-footer > form{
+    flex: 1;
+    display: flex;  
+}
+
+.chat-footer > form > input {
+    flex: 1;
+    border-radius: 30px;
+    padding: 10px;
+    border: none;
+}
+.chat-footer > form > button{
+    display: none;
+}
+
+.chat-footer > .MuiSvgIcon-root{
+    padding: 10px;
+    color: gray;
 }
