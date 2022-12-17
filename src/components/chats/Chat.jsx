@@ -8,7 +8,7 @@ import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
 import MicNoneOutlinedIcon from '@mui/icons-material/MicNoneOutlined';
 import { useState, useRef, useEffect } from 'react';
 import axios from '../../axios';
-
+import moment from 'moment'
 const Chat = ({messages}) => {
   const[inputMessage, setInputMessage] = useState("");
 
@@ -22,7 +22,7 @@ const Chat = ({messages}) => {
     await axios.post("messages/new", {
       message: inputMessage,
       name:"shubhi",
-      timestamp: "Just now",
+      timestamp: moment().format('LT'),
       recieved: false
     })
     setInputMessage("");
